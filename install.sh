@@ -35,7 +35,6 @@ sudo sed -i '/export CLASSPATH/a export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre
 
 # SSH server non password login.
 sudo chmod 755 ~/.ssh
-#sudo chmod 644 ~/.ssh/*
 sudo rm ~/.ssh/*
 ssh-keygen -t rsa  -f ~/.ssh/id_rsa -P ""
 #sudo sed -i '/#AuthorizedKeysFile/a AuthorizedKeysFile	%h/.ssh/authorized_keys' /etc/ssh/sshd_config
@@ -100,7 +99,6 @@ sed -i '$a\</configuration>' /usr/local/hadoop/conf/hdfs-site.xml
 #</property>
 #</configuration>
 
-
 sed -i '/configuration>/d' /usr/local/hadoop/conf/mapred-site.xml
 sed -i '$a\<configuration>' /usr/local/hadoop/conf/mapred-site.xml
 sed -i '$a\<property>' /usr/local/hadoop/conf/mapred-site.xml
@@ -116,7 +114,7 @@ sed -i '$a\</configuration>' /usr/local/hadoop/conf/mapred-site.xml
 #</property>
 #</configuration>
 
-# Format
+# Format & Reboot computer
+
 hadoop namenode -format
-# reboot
 sudo reboot
