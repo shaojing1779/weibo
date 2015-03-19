@@ -19,3 +19,17 @@
 6、执行shell程序开始安装,安装完毕计算机自动重启
 
     ./install.sh
+
+7、系统重新启动后运行命令jps可以看到以下六个进程（其中Jps表示执行jps命令本身这个java进程）表示安装成功
+
+    3270 Jps
+
+    2920 JobTracker
+
+    2634 NameNode
+
+    3028 TaskTracker
+
+    2736 DataNode
+
+    2840 SecondaryNameNode

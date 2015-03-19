@@ -116,6 +116,6 @@ sed -i '$a\<value>hadoop:9001</value>' /usr/local/hadoop/conf/mapred-site.xml
 sed -i '$a\</property>' /usr/local/hadoop/conf/mapred-site.xml
 sed -i '$a\</configuration>' /usr/local/hadoop/conf/mapred-site.xml
 
-# Format & Reboot computer
+# Format namenode & Reboot computer
 hadoop namenode -format
 sudo reboot
